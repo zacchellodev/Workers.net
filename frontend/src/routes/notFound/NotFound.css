@@ -1,0 +1,23 @@
+.notFoundContent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+.notFoundContainer {
+  color: white;
+  line-height: 1.5rem;
+}
+
+.notFoundContainer h1 {
+  font-size: 60px;
+}
+
+.notFoundContainer h2 {
+  font-size: 30px;
+}
