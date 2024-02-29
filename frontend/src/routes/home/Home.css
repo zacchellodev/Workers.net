@@ -1,8 +1,9 @@
 /* Porque a Workers.net? */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 .homeContent {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   background-color: #2b2b2b;
 }
 
@@ -52,7 +53,80 @@
   font-size: 26px;
 }
 
-.home-main .left h1 {
+.home-main {
+  display: flex;
+}
+
+.home-main .left .whyUs {
+  padding-left: 150px;
+  padding-top: 30px;
+  margin: 0;
+}
+
+.home-main .left .whyUs h1 {
+  line-height: 0;
   color: rgb(0, 255, 0);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Playfair Display", serif;
+  font-size: 46px;
+}
+
+.home-main .left .whyUs span {
+  text-decoration: underline;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 50px;
+}
+
+.home-main .left .whyUs p {
+  font-size: 18px;
+  color: white;
+  font-family: Helvetica, sans-serif;
+}
+
+.home-main .left .howStart {
+  padding-left: 130px;
+  padding-top: 30px;
+}
+
+.home-main .right {
+  padding-left: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-main .right #title {
+  color: rgb(0, 255, 0);
+  font-size: 46px;
+  font-family: "Playfair Display", serif;
+  line-height: 50px;
+}
+
+.home-main .right .pic-name-function {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-main .right .pic-name-function a {
+  font-size: 14px;
+  color: #7fffd4;
+  font-family: Helvetica, sans-serif;
+  transition: all .2s;
+  font-weight: lighter;
+}
+
+.home-main .right .pic-name-function a:hover {
+  color: #f2f2f2;
+}
+
+.home-main .right .pic-name-function img {
+  width: 100px;
+  height: 100px;
+}
+
+.home-main .right .pic-name-function h2 {
+  color: #7fffd4;
+  font-family: "Playfair Display", serif;
+  font-family: 10px;
 }
