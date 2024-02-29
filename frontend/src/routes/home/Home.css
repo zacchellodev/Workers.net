@@ -81,11 +81,62 @@
   font-size: 18px;
   color: white;
   font-family: Helvetica, sans-serif;
+  text-align: center;
+  line-height: 30px;
 }
 
 .home-main .left .howStart {
-  padding-left: 130px;
-  padding-top: 30px;
+  padding-left: 250px;
+  padding-top: 50px;
+}
+
+.home-main .left .howStart #getStartedTitle {
+  font-size: 40px;
+  color: rgb(0, 255, 0);
+  font-family: "Playfair Display", serif;
+}
+
+.home-main .left .howStart .loginRegisterForm {
+  background-color: #1b1b1b;
+  color: #b2b2b2;
+  padding: 30px;
+  width: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-main .left .howStart .loginRegisterForm h1 {
+  font-size: 28px;
+  font-family: "Playfair Display", serif;
+  color: rgb(0, 255, 0);
+}
+
+.home-main .left .howStart .loginRegisterForm label {
+  font-size: 24px;
+  font-family: Helvetica, sans-serif;
+}
+
+.home-main .left .howStart .loginRegisterForm input {
+  font-size: 16px;
+}
+
+.home-main .left .howStart span {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.home-main .left .howStart #switchForm {
+  cursor: pointer;
+  color: rgb(0, 255, 0);
+  transition: all .3s;
+}
+
+.home-main .left .howStart #switchForm:hover {
+  color: #7fffd4;
 }
 
 .home-main .right {
@@ -121,8 +172,7 @@
 }
 
 .home-main .right .pic-name-function img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
 }
 
 .home-main .right .pic-name-function h2 {

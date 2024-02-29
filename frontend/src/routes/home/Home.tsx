@@ -4,10 +4,39 @@ import './Home.css'
 
 export default function Home() {
   const [searchInp, setSearchInp] = useState('')
+  
+  //login/register
+  const [showLoginForm, setShowLoginForm] = useState(false)
+  const [usernameInp, setUsernameInp] = useState('')
+  const [emailInp, setEmailInp] = useState('')
+  const [passwordInp, setPasswordInp] = useState('')
 
   //TODO
   const handleSearchBtn = () => {
     console.log(`Search Button Clicked!\nUser "Searched": ${searchInp}`)
+  }
+
+  const handleLoginRegisterSwitch = () => {
+    switch (showLoginForm) {
+      case false:
+        setShowLoginForm(true)
+        break
+      case true:
+        setShowLoginForm(false)
+        break
+      default:
+        break
+    }
+  }
+
+  //TODO
+  const handleLoginSubmit = () => {
+    console.log(`Username typed: ${usernameInp}\nPassword typed: ${passwordInp}`)
+  }
+
+  //TODO
+  const handleRegisterSubmit = () => {
+    console.log(`Username typed: ${usernameInp}\nEmail typed: ${emailInp}\nPassword typed: ${passwordInp}`)
   }
 
   return (
@@ -23,7 +52,7 @@ export default function Home() {
           />
           <button onClick={handleSearchBtn}><i className="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <a href="#">ABOUT US</a>
+        <a href="#">SOBRE NÓS</a>
       </div>
       <div className="home-main">
         <article className="left">
@@ -35,7 +64,77 @@ export default function Home() {
             labore quibusdam. Cumque officiis modi at neque.</p>
           </div>
           <div className="howStart">
-            <h1>Como começar</h1>
+            <h1 id="getStartedTitle">Como começar</h1>
+            {showLoginForm === false ? (
+              <div>
+                <form className="loginRegisterForm" onSubmit={handleLoginSubmit}>
+                  <h1>Entrar</h1>
+                  <label>
+                    Nome de usuário
+                    <br />
+                    <input
+                      type="text"
+                      placeholder="Username..."
+                      required
+                      onChange= {(e) => setUsernameInp(e.target.value)}
+                    />
+                  </label><br />
+                  <label>
+                    Senha
+                    <br />
+                    <input
+                      type="password"
+                      placeholder="Senha..."
+                      required
+                      onChange={(e) => setPasswordInp(e.target.value)}
+                    />
+                  </label>
+                  <br />
+                  <button type="submit">ENVIAR</button>
+                </form>
+                <br />
+                <span>Não tem uma conta ainda? <a id="switchForm" onClick={handleLoginRegisterSwitch}>Registre-se</a></span>
+              </div>
+            ) : (
+              <div>
+                <form className="loginRegisterForm" onSubmit={handleRegisterSubmit}>
+                  <h1>Registrar</h1>
+                  <label>
+                    Nome de usuário
+                    <br />
+                    <input
+                      type="text"
+                      placeholder="Username..."
+                      required
+                      onChange= {(e) => setUsernameInp(e.target.value)}
+                    />
+                  </label><br />
+                  <label>
+                    Email
+                    <br />
+                    <input
+                      type="email"
+                      placeholder="Email..."
+                      required
+                      onChange={(e) => setEmailInp(e.target.value)}
+                    />
+                  </label><br />
+                  <label>
+                    Senha
+                    <input
+                      type="password"
+                      placeholder="Senha..."
+                      required
+                      onChange={(e) => setPasswordInp(e.target.value)}
+                    />
+                  </label>
+                  <br />
+                  <button type="submit">ENVIAR</button>
+                </form>
+                <br />
+                <span style={{ paddingLeft: '40px' }}>Já tem uma conta? <a id="switchForm" onClick={handleLoginRegisterSwitch}>Entrar</a></span>
+              </div>
+            )}
           </div>
         </article>
         <article className="right">
