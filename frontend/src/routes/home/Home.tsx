@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, SyntheticEvent } from 'react'
 import GabrielPedrosoPfp from './GabrielPedrosoPfp.jpg'
 import './Home.css'
 
@@ -30,12 +30,14 @@ export default function Home() {
   }
 
   //TODO
-  const handleLoginSubmit = () => {
+  const handleLoginSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault()
     console.log(`Username typed: ${usernameInp}\nPassword typed: ${passwordInp}`)
   }
 
   //TODO
-  const handleRegisterSubmit = () => {
+  const handleRegisterSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault()
     console.log(`Username typed: ${usernameInp}\nEmail typed: ${emailInp}\nPassword typed: ${passwordInp}`)
   }
 
